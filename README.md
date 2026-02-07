@@ -13,6 +13,74 @@ Perfect for:
 - 🎬 Media servers or home automation systems
 - ⚙️ Long-running computations
 
+## Installation
+
+### One-Command Install (Easiest)
+
+Download and install in one command:
+
+**Lock Screen Only (default):**
+```bash
+curl -L https://raw.githubusercontent.com/Genaker/LinuxSleepServerMod/main/install.sh | bash -s lock
+```
+
+**Lock Screen + Stop GUI:**
+```bash
+curl -L https://raw.githubusercontent.com/Genaker/LinuxSleepServerMod/main/install.sh | bash -s gui-stop
+```
+
+Or using wget:
+
+**Lock Screen Only:**
+```bash
+wget -qO- https://raw.githubusercontent.com/Genaker/LinuxSleepServerMod/main/install.sh | bash -s lock
+```
+
+**Lock Screen + Stop GUI:**
+```bash
+wget -qO- https://raw.githubusercontent.com/Genaker/LinuxSleepServerMod/main/install.sh | bash -s gui-stop
+```
+
+This will automatically:
+- Download the repository
+- Extract files
+- Run the appropriate setup script (lock or gui-stop)
+- Clean up temporary files
+
+### Quick Install from Git (wget/curl)
+
+**Using wget:**
+```bash
+# Download and extract
+wget https://github.com/Genaker/LinuxSleepServerMod/archive/refs/heads/main.zip -O lockscreen.zip
+unzip lockscreen.zip
+cd LinuxSleepServerMod-main
+chmod +x setup-lock.sh setup-gui-stop.sh uninstall.sh
+
+# Run setup
+./setup-lock.sh
+```
+
+**Using curl:**
+```bash
+# Download and extract
+curl -L https://github.com/Genaker/LinuxSleepServerMod/archive/refs/heads/main.zip -o lockscreen.zip
+unzip lockscreen.zip
+cd LinuxSleepServerMod-main
+chmod +x setup-lock.sh setup-gui-stop.sh uninstall.sh
+
+# Run setup
+./setup-lock.sh
+```
+
+**Or clone with git:**
+```bash
+git clone https://github.com/Genaker/LinuxSleepServerMod.git
+cd LinuxSleepServerMod
+chmod +x setup-lock.sh setup-gui-stop.sh uninstall.sh
+./setup-lock.sh
+```
+
 ## Quick Start
 
 ### Automated Setup (Recommended)

@@ -17,14 +17,14 @@ Perfect for:
 
 ### Automated Setup (Recommended)
 
-**Basic version (lock screen only):**
+**Option 1: Lock Screen Only**
 ```bash
-./setup.sh
+./setup-lock.sh
 ```
 
-**Advanced version (lock screen + stop GNOME):**
+**Option 2: Lock Screen + Stop GUI**
 ```bash
-./setup-stop-gnome.sh
+./setup-gui-stop.sh
 ```
 
 These scripts will:

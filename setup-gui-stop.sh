@@ -1,10 +1,10 @@
 #!/bin/bash
-# Setup script for Linux Sleep Server Mod - Lock Screen and Stop GNOME
+# Setup script for Linux Sleep Server Mod - Lock Screen and Stop GUI
 
 set -e
 
 echo "=========================================="
-echo "Linux Sleep Server Mod - Advanced Setup"
+echo "Linux Sleep Server Mod - GUI Stop Setup"
 echo "Lock Screen AND Stop GNOME GUI"
 echo "=========================================="
 echo ""
@@ -26,8 +26,9 @@ echo ""
 
 echo "Step 2: Setting up sudo access for GDM control..."
 if [ ! -f "/etc/sudoers.d/lid-gui-control" ]; then
-    echo "ai" | sudo -S bash -c 'echo "ai ALL=(ALL) NOPASSWD: /bin/systemctl stop gdm3, /bin/systemctl start gdm3, /bin/systemctl stop gdm, /bin/systemctl start gdm" > /etc/sudoers.d/lid-gui-control'
-    echo "ai" | sudo -S chmod 0440 /etc/sudoers.d/lid-gui-control
+    USERNAME=$(whoami)
+    echo "$USERNAME" | sudo -S bash -c "echo '$USERNAME ALL=(ALL) NOPASSWD: /bin/systemctl stop gdm3, /bin/systemctl start gdm3, /bin/systemctl stop gdm, /bin/systemctl start gdm' > /etc/sudoers.d/lid-gui-control"
+    echo "$USERNAME" | sudo -S chmod 0440 /etc/sudoers.d/lid-gui-control
     echo "✓ Sudo configuration created"
 else
     echo "✓ Sudo configuration already exists"

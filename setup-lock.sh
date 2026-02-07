@@ -1,10 +1,10 @@
 #!/bin/bash
-# Setup script for Linux Sleep Server Mod - Lock Screen Without Suspend
+# Setup script for Linux Sleep Server Mod - Lock Screen Only
 
 set -e
 
 echo "=========================================="
-echo "Linux Sleep Server Mod - Setup"
+echo "Linux Sleep Server Mod - Lock Screen Setup"
 echo "Lock Screen Without Suspend"
 echo "=========================================="
 echo ""
@@ -68,8 +68,9 @@ echo "✓ Autostart configured"
 echo ""
 
 echo "Step 4: Starting daemon..."
-# Kill any existing daemon
+# Kill any existing daemons
 pkill -f lid-lock-daemon 2>/dev/null || true
+pkill -f lid-lock-stop-gnome 2>/dev/null || true
 sleep 1
 
 # Start new daemon

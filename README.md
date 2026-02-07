@@ -15,14 +15,30 @@ Perfect for:
 
 ## Quick Start
 
-### Step 1: Configure GNOME Power Settings
+### Automated Setup (Recommended)
+
+Run the setup script to install and configure everything automatically:
+
+```bash
+./setup.sh
+```
+
+This will:
+- Configure GNOME power settings
+- Install daemon scripts (bash and Go if available)
+- Set up autostart
+- Start the daemon
+
+### Manual Setup
+
+#### Step 1: Configure GNOME Power Settings
 
 ```bash
 gsettings set org.gnome.settings-daemon.plugins.power lid-close-ac-action 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power lid-close-battery-action 'nothing'
 ```
 
-### Step 2: Install the Lock Daemon
+#### Step 2: Install the Lock Daemon
 
 **Option A: Using Bash Scripts**
 
@@ -51,7 +67,7 @@ cp lid-lock-daemon ~/.local/bin/
 chmod +x ~/.local/bin/lid-lock-daemon
 ```
 
-### Step 3: Configure Autostart
+#### Step 3: Configure Autostart
 
 ```bash
 # Create autostart directory
@@ -62,7 +78,7 @@ cp lid-lock.desktop ~/.config/autostart/
 # Edit ~/.config/autostart/lid-lock.desktop and replace YOUR_USERNAME with your username
 ```
 
-### Step 4: Start the Daemon
+#### Step 4: Start the Daemon
 
 **Bash version:**
 ```bash

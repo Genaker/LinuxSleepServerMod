@@ -17,17 +17,28 @@ Perfect for:
 
 ### Automated Setup (Recommended)
 
-Run the setup script to install and configure everything automatically:
-
+**Basic version (lock screen only):**
 ```bash
 ./setup.sh
 ```
 
-This will:
+**Advanced version (lock screen + stop GNOME):**
+```bash
+./setup-stop-gnome.sh
+```
+
+These scripts will:
 - Configure GNOME power settings
 - Install daemon scripts (bash and Go if available)
 - Set up autostart
 - Start the daemon
+
+### Uninstall
+
+To remove everything:
+```bash
+./uninstall.sh
+```
 
 ### Manual Setup
 

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Lid Lock Daemon (Go)
+Comment=Lock screen when laptop lid is closed (Go version)
+Exec=/home/YOUR_USERNAME/.local/bin/lid-lock-daemon
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true

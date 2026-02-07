@@ -1,0 +1,23 @@
+*.log
+*.tmp
+.DS_Store
+*.swp
+*~
+
+# Go binaries
+lid-lock-daemon
+lid-lock-stop-gnome
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go test files
+*.test
+*.out
+
+# IDE
+.vscode/
+.idea/
+*.iml

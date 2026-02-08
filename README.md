@@ -116,7 +116,13 @@ To remove everything:
 gsettings set org.gnome.settings-daemon.plugins.power lid-close-ac-action 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power lid-close-battery-action 'nothing'
 ```
-
+and this
+sudo nano /etc/systemd/logind.conf
+```
+HandleLidSwitch=ignore
+HandleLidSwitchExternalPower=ignore
+HandleLidSwitchDocked=ignore
+```
 #### Step 2: Install the Lock Daemon
 
 **Option A: Using Bash Scripts**
